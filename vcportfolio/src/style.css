@@ -1,0 +1,424 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #FFFFFF;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff6f6;
+  padding: 6px 20px;
+  height: 50px; /* optional fixed height */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  height: auto;
+  height: 6em;
+  padding: 3em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo img {
+  height: 35px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #ab6464;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 4px 8px;
+  margin: 0;
+}
+
+
+.nav-links li a:hover {
+  color: #633939; /* hover color */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #cae4da;
+
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      #e3f5ee,        /* grid line color */
+      #e3f5ee 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #e3f5ee,
+      #e3f5ee 1px,
+      transparent 1px,
+      transparent 28px
+    );
+
+    background-size: 28px 28px; /* size of each grid square */
+}
+
+.main-content {
+  padding: 2rem 2rem 2rem 2rem; /* smaller padding on all sides */
+}
+
+.intro-box {
+  display: inline-block;        /* ✨ makes the box shrink to fit the text */
+  background-color: #e3f5ee;
+  border: 2px solid #fff;
+  border-radius: 24px;
+  margin: 2rem auto 2rem auto;  /* auto centers horizontally, small top margin */
+  max-width: 580px;             /* keeps it narrow */
+  padding: 2rem 1rem;
+
+  margin: 13.5rem 15rem 0rem 12rem;
+}
+
+.more-about-me {
+  text-align: center;
+  margin: 1rem 0; /* space between intro and cards */
+  opacity: 0; /* start invisible for float-up animation */
+  transform: translateY(30px); /* start slightly lower */
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.more-about-me.visible {
+  opacity: 1;
+  transform: translateY(0); /* float up */
+}
+
+.floating-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4c6a68;
+  margin-bottom: 1rem;
+}
+
+.down-arrows {
+  display: flex;              /* put arrows in a row */
+  justify-content: center;    /* center them horizontally */
+  gap: 0.5rem;                /* space between arrows */
+  margin-bottom: 1rem;        /* optional spacing below */
+}
+
+.down-arrows span {
+  font-size: 2rem;
+  color: #4c6a68;
+  animation: bounce 2s infinite alternate;
+}
+
+/* Bounce animation for arrows */
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(15px); }
+}
+
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.text-content {
+  flex: 2;
+}
+
+section {
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Base typography for the whole site */
+body, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;  /* normal weight by default */
+  margin: 0;
+  padding: 0;
+  color: #4c6a68;  /* adjust for your theme */
+}
+
+/* Headings: only sizes and line-heights differ */
+h1 {
+  font-size: 2em;    /* corrected from 11em% */
+  font-weight: 700;;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 1.25em;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.contact-title {
+  font-size: 1.4em;
+  text-align: center;
+  font-weight: 700;
+}
+
+footer{
+  font-size: 0.8em;
+  text-align: left;
+  
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.floating-image {
+  position: absolute;
+  top: 180px; /* adjust as needed */
+  left: 750px; /* adjust as needed */
+  width: 400px; /* or whatever size you want */
+  z-index: 1000; /* ensures it's above the text */
+  pointer-events: none; /* makes it unclickable and allows clicks to go through */
+}
+
+.floating-image2 {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers it perfectly */
+  width: 400px;
+  pointer-events: none; /* Keeps it unclickable */
+  z-index: 1000;
+}
+
+/* === Social icons === */
+.floating-icon {
+  position: absolute;
+  top: 140px;             /* same height as main image */
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+}
+
+.floating-icon img {
+  width: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pop hover effect */
+.floating-icon img:hover {
+  transform: scale(1.15);
+}
+
+/* === Individual icon horizontal positions === */
+.icon1 { left: 15%; }
+.icon2 { left: 25%; }
+.icon3 { left: 75%; }
+.icon4 { left: 85%; }
+.wavy-line-container {
+  width: 100%;
+  overflow: show;
+  height: 50px; /* line height */
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  gap: 1rem;               /* space between icons */
+  margin-top: 1rem;        /* spacing above */
+}
+
+.footer-social-icons img {
+  width: 30px;            /* smaller than floating icons */
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.footer-social-icons img:hover {
+  transform: scale(1.2);  /* tiny pop on hover */
+}
+
+
+.wavy-line {
+  width: 200%; /* double width for smooth animation */
+  animation: wave-slide 10s linear infinite;
+}
+
+@keyframes wave-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.skills-section {
+  padding: 1rem 2rem;   /* space above/below section */
+}
+
+.skill-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers the row */
+  gap: 2rem 1.5rem; /* row-gap | column-gap */*/
+}
+
+.skill-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  width: calc(50% - 5rem); /* two cards per row, accounts for column gap */
+  text-align: center;
+  border-radius: 20px;      /* rounded corners */
+  flex: 0 1 auto;     /* lets flexbox control layout */
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.skill-card img {
+  width: 300px;        /* uniform width */
+  height: 250px;       /* uniform height */
+  object-fit: cover;   /* crops image nicely if different sizes */
+  border: 4px solid #FFFFFF;
+  border-radius: 10px; /* optional rounded images */
+  margin-bottom: 1rem;
+}
+
+.skill-card h2 {
+  font-weight: 700;   /* bold titles */
+  margin-bottom: 0.5rem;
+}
+
+.skill-card h3 {
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #4c6a68;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Project card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Card image */
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card content */
+.project-info {
+  padding: 1rem;
+}
+
+.project-info h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
