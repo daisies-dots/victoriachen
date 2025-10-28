@@ -337,7 +337,7 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* centers the row */
-  gap: 2rem 1.5rem; /* row-gap | column-gap */*/
+  gap: 2rem 1.5rem; /* row-gap | column-gap */
 }
 
 .skill-card {
@@ -420,5 +420,4 @@ button:focus-visible {
   margin: 0;
   color: #555;
   font-size: 0.95rem;
-  line-height: 1.4;
 }
